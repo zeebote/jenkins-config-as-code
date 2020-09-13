@@ -10,4 +10,4 @@ To apply this configuration:
 1. Apply new configuration.
 
 Watch your jenkins for the **seed-all** job run (2 minutes after applying this config) and create a freestyle job and a pipeline job.<br>
-Testing job trigger by copying either freestyle.groovy or pipeline.groovy, rename the job title then commit to your repo and watch the **seed-all** job run and create new jenkins job.
+Testing job trigger by copying either freestyle.groovy or pipeline.groovy, rename the job title then commit to your repo with new filename.groovy and watch the **seed-all** job run and create new jenkins job.
