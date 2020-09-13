@@ -5,12 +5,19 @@ pipelineJob('pipeline-example') {
       scm {
         git {
           remote {
-            url('https://github.com/zeebote/maven-dep')
+            url('https://github.com/zeebote/maven-nexus')
           }
           branch('*/master')
         }
       }
       lightweight()
     }
+  }
+  triggers {
+    githubPush {
+      buildOnPushEvents(true)
+      buildOnMergeRequestEvents(true)
+      commentTrigger("jenkins please")
+    }    
   }
 }
