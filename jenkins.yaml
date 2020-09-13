@@ -1,0 +1,23 @@
+jenkins:
+  systemMessage: "Configuration as Code"
+jobs:
+  - script: >
+      job('seed-all') {
+        triggers {
+          cron('H/2 * * * *')
+        }
+        scm {
+          git {
+            remote {
+              url ('https://github.com/zeebote/jenkins-config-as-code.git')
+            }
+            branch('*/master')
+          }
+        }
+        steps {
+          dsl {
+            external('jobs/**/*.groovy')
+            removeAction('DELETE')
+          }
+        }
+      }
