@@ -1,6 +1,6 @@
 job('seed-all') {
   triggers {
-    gitlabPush {
+    githubPush {
       buildOnPushEvents(true)
     }    
   }
