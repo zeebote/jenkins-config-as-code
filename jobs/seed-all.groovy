@@ -9,7 +9,7 @@ job('seed-all') {
       remote {
         url ('https://github.com/zeebote/jenkins-config-as-code.git')
       }
-      branch('*/master')
+      branch('*/develop')
     }
   }
   steps {
