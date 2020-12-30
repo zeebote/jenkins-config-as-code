@@ -7,7 +7,7 @@ pipelineJob('pipeline-example') {
           remote {
             url('https://github.com/zeebote/maven-nexus')
           }
-          branch('*/master')
+          branch('*/develop')
         }
       }
       lightweight()
